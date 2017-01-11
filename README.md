@@ -22,4 +22,4 @@ Go to the top of this page and click:
 
 ![alt tag](https://s28.postimg.org/plurz9b8t/release.png)
 
-Or click [here](releases).
+Or click [here](https://github.com/FacuM/superadmin/releases).
