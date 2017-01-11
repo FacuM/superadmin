@@ -14,4 +14,12 @@ If the account have been created at leas 6 months before the current date, it  w
 
 Don't forget to check "facebookupdater", the Chrome extension. This extension is based in the javascript script "recursiveAddPollos.js", [read more](facebookupdater/README.md).
 
-Click [here](facebookupdater) to check the source and/or download a packed release.
+Click [here](facebookupdater) to check the source.
+
+#Public releases
+
+Go to the top of this page and click:
+
+![alt tag](https://s28.postimg.org/plurz9b8t/release.png)
+
+Or click [here](releases).
