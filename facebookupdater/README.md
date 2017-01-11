@@ -6,6 +6,12 @@ Browse "unpacked" to see the extension's source.
 
 Browse "packed" to get an already packed version.
 
+#How it works?
+
+1) Go to the group's membership requests page on FB. Example: http://facebook.com/groups/groupname/requests/<br>
+2) Leave the tab open and do whatever else you'd like to do.<br>
+3) Enjoy while the bot do your dirty job ;)
+
 Installing:
 
 - Unpacked:
