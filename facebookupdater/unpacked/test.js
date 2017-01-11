@@ -1,7 +1,6 @@
 var oldCuate="";
-var minTime=15552000;	//6 meses de antiguedad.
+var minTime=15552000;	//6 months since account creation.
 //var minTime=315360000;
-var resTime=60;
 function operaciones(op)
 {
     var ops = {
@@ -19,37 +18,37 @@ function recursiveApproval(){
 			if(currentCuate.name!=oldCuate){
 				oldCuate=currentCuate.name;
 				console.log("----------------------------------------");
-				console.log("Pollo : "+currentCuate.name);
-				console.log("Fecha de creación del pollo: "+currentCuate.date.printDate);
+				console.log("Name : "+currentCuate.name);
+				console.log("Account creation date: "+currentCuate.date.printDate);
 				var time=new Date();
 					time=time.getTime();
 				var deltaTime=time-currentCuate.date.timestamp;
 				if(deltaTime>(minTime*1000)){
-					console.log("Pollo añadido al grupo");
+					console.log("Added to the group.");
 				}else{
-					console.log("Pollo rechazado, pollo demasiado joven (menos de 6 meses)");
-					a=getDeclineUser(a);	//Reemplazo el botón que voy a clickear por "Rechazar".
+					console.log("Request denied: too new account.");
+					a=getDeclineUser(a);	//Replace the button that's going to be clicked by "Decline".
 				}
 				a.dispatchEvent(new MouseEvent("click",{cancelable:false, bubbles: true, view: window}));	//Clickeo.
 				var tTime=3000+Math.random()*2000;
 				console.log("----------");
-				console.log("Proximo pollo en  "+Math.round(tTime/1000)+ " segundos");
+				console.log("Next account in "+Math.round(tTime/1000)+ " seconds...");
 				setTimeout(function(){
 					recursiveApproval();
 				},tTime);
 			}else{
-				console.log(currentCuate.name+" repetido, reintentando en 1 seg.");
+				console.log(currentCuate.name+" repeated, retrying in one second (1 second).");
 				setTimeout(function(){
 					recursiveApproval();
 				},1000);
 			}
 		}else{
-			console.log("No se encontraron mas pollos :/");
+			console.log("No more accounts found.");
 			
 		}
 	
 }
-//////Obtiene el nombre y fecha de creación del DOM:
+//////Gets the DOM's name and creation date.
 function processUserData(elm){
 	var _element=elm.parentNode.parentNode;
 	_element=_element.childNodes[1];
@@ -57,14 +56,14 @@ function processUserData(elm){
 	_obj.name=getName(_element);
 	_obj.date=getDate(_element);
 	return _obj;
-	//Nombre:
+	//Name:
 	function getName(p){
 		var auxDiv=document.createElement("div");
 			auxDiv.innerHTML=p.innerHTML;
 		var n=auxDiv.getElementsByTagName("a")[0]
 	return n.innerText;
 	}
-	//Fecha de creación:
+	//Creation date:
 	function getDate(e){
 		var calendar={
 		"enero":"01",
@@ -89,7 +88,7 @@ function processUserData(elm){
 	}
 }
 
-// Obtiene el botón de rechazo a partir del Approval.
+// Gets the button to decline a request over the Approval button.
 function getDeclineUser(e){
 	var    _element=e.parentNode
 		   _element=_element.childNodes[1];
@@ -102,5 +101,9 @@ function getDeclineUser(e){
 //}else{
 //	var resTime = op.restar(resTime, 1);
 //};
+
+setTimeout(function(){
+   window.location.reload(1);
+}, 60000);
 
  recursiveApproval();
