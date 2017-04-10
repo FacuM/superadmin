@@ -1,6 +1,5 @@
 var oldCuate="";
 var minTime=15552000;	//6 months since account creation.
-//var minTime=315360000;
 function operaciones(op)
 {
     var ops = {
@@ -94,13 +93,6 @@ function getDeclineUser(e){
 		   _element=_element.childNodes[1];
 	return _element;
 }
-
-//if (resTime.intValue() == 0) {
-//	location.window.reload()
-//	var resTime = 60;
-//}else{
-//	var resTime = op.restar(resTime, 1);
-//};
 
 setTimeout(function(){
    window.location.reload(1);
