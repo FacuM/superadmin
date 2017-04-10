@@ -1,4 +1,4 @@
-#superadmin
+# superadmin
 
 This Chrome extension is based in the script presented in the root of this branch and is a fork of Gabitox's work.
 
@@ -6,7 +6,7 @@ Browse "unpacked" to see the extension's source.
 
 Browse "packed" to get an already packed version.
 
-#How it works?
+## How it works?
 
 1) Go to the group's membership requests page on FB. Example: http://facebook.com/groups/groupname/requests/<br>
 2) Leave the tab open and do whatever else you'd like to do.<br>
@@ -22,7 +22,7 @@ Go to chrome://extensions and enable "Developer mode". Then, click in "Load unpa
 
 Go to chrome://extensions and drag the .crx file you got anywhere on the page.
 
-#Editing the source
+## Editing the source
 
 - Please see definition for minTime "var minTime=15552000;" at the second line (line 2, just in case) of "test.js" to change the minimum account creation date. It is in seconds. The default, means 6 months.
 
