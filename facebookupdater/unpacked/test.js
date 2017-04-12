@@ -1,16 +1,14 @@
 var oldCuate="";
 var minTime=15552000;	//6 months since account creation.
-function operaciones(op)
-{
-    var ops = {
-        restar: function restarNumeros(n1, n2) {
-            return (parseInt(n1) - parseInt(n2));
-        }
-
-    };
-}
 
 function recursiveApproval(){
+		//Look for any close button if the person was already in the group
+		var cancelbutton = document.getElementsByClassName('autofocus layerCancel _4jy0 _4jy3 _4jy1 _51sy selected _42ft');
+		var cancelbutton1st = cancelbutton[0];
+		if(typeof(cancelbutton1st)!='undefined' && cancelbutton1st!=null){
+			console.log('|--> Found "Close" button, clicking...');
+			cancelbutton1st.click();
+		}
 		var  a=document.getElementsByName("approve button")[0];
 		if(typeof(a)!='undefined' && a!=null){
 			var currentCuate=processUserData(a);
