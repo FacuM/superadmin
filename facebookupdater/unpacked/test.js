@@ -2,13 +2,6 @@ var oldCuate="";
 var minTime=15552000;	//6 months since account creation.
 
 function recursiveApproval(){
-		//Look for any close button if the person was already in the group
-		var cancelbutton = document.getElementsByClassName('autofocus layerCancel _4jy0 _4jy3 _4jy1 _51sy selected _42ft');
-		var cancelbutton1st = cancelbutton[0];
-		if(typeof(cancelbutton1st)!='undefined' && cancelbutton1st!=null){
-			console.log('|--> Found "Close" button, clicking...');
-			cancelbutton1st.click();
-		}
 		var  a=document.getElementsByName("approve button")[0];
 		if(typeof(a)!='undefined' && a!=null){
 			var currentCuate=processUserData(a);
@@ -34,6 +27,13 @@ function recursiveApproval(){
 					recursiveApproval();
 				},tTime);
 			}else{
+				//Look for any close button if the person was already in the group
+				var cancelbutton = document.getElementsByClassName('autofocus layerCancel _4jy0 _4jy3 _4jy1 _51sy selected _42ft');
+				var cancelbutton1st = cancelbutton[0];
+				if(typeof(cancelbutton1st)!='undefined' && cancelbutton1st!=null){
+				console.log('|--> Found "Close" button, clicking...');
+				cancelbutton1st.click();
+				}
 				console.log(currentCuate.name+" repeated, retrying in one second (1 second).");
 				setTimeout(function(){
 					recursiveApproval();
