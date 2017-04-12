@@ -32,7 +32,7 @@ function recursiveApproval(){
 				var cancelbutton1st = cancelbutton[0];
 				if(typeof(cancelbutton1st)!='undefined' && cancelbutton1st!=null){
 					console.log('|--> Found "Close" button, clicking...');
-						cancelbutton1st.click();
+					cancelbutton1st.click();
 					}
 				console.log(currentCuate.name+" repeated, retrying in one second (1 second).");
 				setTimeout(function(){
