@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "FGRP",
-  "version": "1.40",
+  "version": "1.45",
   "description": "FGRP stands for Facebook Group Requests Processor and accepts or denies requests based on their Facebook account's creation date.",
   "browser_action": {
     "default_icon": "icon128.png"
