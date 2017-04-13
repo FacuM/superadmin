@@ -27,3 +27,5 @@ Go to chrome://extensions and drag the .crx file you got anywhere on the page.
 - Please see definition for minTime "var minTime=15552000;" at the second line (line 2, just in case) of "test.js" to change the minimum account creation date. It is in seconds. The default, means 6 months.
 
 - Edit the numeric part of "}, 60000);" (from the function setTimeout at the bottom of "test.js"). Example: change 60000 by 5000 to set at "every 5 seconds". Please take in mind that lower numbers mean more resources usage. This value is measured in milliseconds.
+
+- Edit the numeric part of "}, 5000);" (from the last line of "test.js" ) to set the waiting time. This ensures that the site has been completely loaded before the bot starts.
