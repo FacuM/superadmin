@@ -61,7 +61,18 @@ setTimeout(function(){
 			var auxDiv=document.createElement("div");
 				auxDiv.innerHTML=p.innerHTML;
 			var n=auxDiv.getElementsByTagName("a")[0]
-		return n.innerText;
+			//Look for any buggy entry
+				try {
+					return n.innerText;
+				}
+				catch (e) {
+					var fixdenybutton = document.getElementsByClassName('_42ft _4jy0 _4jy3 _517h _51sy');
+					var fixdennybutton1st = fixdenybutton[3];
+					if(typeof(fixdennybutton1st)!='undefined' && fixdennybutton1st!=null){
+						console.log('|--> Found buggy entry, fixing...');
+						fixdennybutton1st.click();
+					}
+				}
 		}
 		//Creation date:
 		function getDate(e){
